@@ -4,20 +4,20 @@
 /* ========== Titles ========== */
 
 @mixin main-title-font($color: $color-default) {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 44px;
+  font-family: "Silkscreen", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 38px !important;
+  line-height: 44px !important;
   color: $color;
 
   @media only screen and (min-width: 800px) {
-    font-size: 46px;
-    line-height: 52px;
+    font-size: 46px !important;
+    line-height: 52px !important;
   }
 
   @media only screen and (min-width: 1250px) {
-    font-size: 54px;
-    line-height: 60px;
+    font-size: 54px !important;
+    line-height: 60px !important;
   }
 }
 

@@ -1,5 +1,5 @@
 import { useStoryblokState, getStoryblokApi, StoryblokComponent } from "@storyblok/react";
-import HeadComponent from "../components/specificComponents/HeadComponent/HeadComponent";
+import HeadComponent from "../components/technicalComponents/HeadComponent/HeadComponent";
 import { getTags } from "../functions/services/metaTagService";
 
 export default function Page({ story, preview, socialtags, menu }) {
@@ -7,7 +7,10 @@ export default function Page({ story, preview, socialtags, menu }) {
     resolveRelations: [
       "hero.colorcode",
       "leftrightblock.colorcode",
-      "course.teachers"
+      "course.colorcode",
+      "person.colorcode",
+      "course.teachers",
+      "list.elements"
     ]
   }, preview);
 
@@ -28,7 +31,10 @@ export async function getStaticProps({ params }) {
     resolve_relations: [
       "hero.colorcode",
       "leftrightblock.colorcode",
-      "course.teachers"
+      "course.colorcode",
+      "person.colorcode",
+      "course.teachers",
+      "list.elements"
     ]
   };
 

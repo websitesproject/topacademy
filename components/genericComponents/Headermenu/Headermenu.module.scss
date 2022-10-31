@@ -83,6 +83,7 @@
     &--1, &--2, &--3, &--4, &--5, &--6 {
       @extend .main-header__nav-item;
       display: none;
+      padding-top: 20px;
     }
     
     &--last{
@@ -180,7 +181,7 @@
       @extend .main-header__expanded-nav-item;
       display: block;
       width: fit-content;
-
+      padding-top: 20px;
       > a:hover, > p:hover {
         cursor: pointer;
         color: $color-blue-normal;
@@ -377,7 +378,7 @@ span.main-header__dropdown-item-text--highlighted {
     }
 
     &__nav-item {
-      padding-top: 10px;
+      padding-top: 20px;
       
       &--menu {
         display: none;
@@ -386,6 +387,7 @@ span.main-header__dropdown-item-text--highlighted {
         display: block;
         grid-column: 1 / 2;
         margin-right: 12px;
+        padding-top: 20px;
       }
       &--1 {
         display: block;
@@ -393,6 +395,7 @@ span.main-header__dropdown-item-text--highlighted {
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
       &--2 {
         display: block;
@@ -400,6 +403,7 @@ span.main-header__dropdown-item-text--highlighted {
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
       &--3 {
         display: block;
@@ -407,6 +411,7 @@ span.main-header__dropdown-item-text--highlighted {
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
       &--4 {
         display: block;
@@ -414,6 +419,7 @@ span.main-header__dropdown-item-text--highlighted {
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
       &--5 {
         display: block;
@@ -421,13 +427,15 @@ span.main-header__dropdown-item-text--highlighted {
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
-      &--5 {
+      &--6 {
         display: block;
         grid-column: 6 / 7;
         grid-row: 1 / 2;
         margin-left: 12px;
         margin-right: 12px;
+        padding-top: 20px;
       }
       
       &--last {
@@ -435,6 +443,7 @@ span.main-header__dropdown-item-text--highlighted {
         grid-column: 10 / 11;
         grid-row: 1 / 2;
         padding-top: 0;
+        padding-top: 20px;
       }
     }
   }
