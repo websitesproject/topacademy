@@ -1,0 +1,265 @@
+﻿@import "colors.scss";
+
+
+/* ========== Titles ========== */
+
+@mixin main-title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 44px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 46px;
+    line-height: 52px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 54px;
+    line-height: 60px;
+  }
+}
+
+@mixin pretitle-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform:uppercase;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 18px;
+    line-height: 44px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 20px;
+    line-height: 52px;
+  }
+}
+
+@mixin title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 35px;
+    line-height: 44px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 41px;
+    line-height: 52px;
+  }
+}
+
+@mixin small-title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+
+@mixin very-small-title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 28px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 20px;
+  }
+}
+
+@mixin posttitle-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 18px;
+    line-height: 44px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 26px;
+    line-height: 52px;
+  }
+}
+
+@mixin posttitle-font-small($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+
+/* ========== Texts ========== */
+
+@mixin text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+
+@mixin large-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 28px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+/* ========== Card-texts ========== */
+
+@mixin card-title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color;
+}
+
+@mixin card-title-font-large($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 40px;
+  color: $color;
+}
+
+@mixin card-title-font-small($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 34px;
+  color: $color;
+}
+
+@mixin card-info-font-small($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: $color;
+}
+
+@mixin card-info-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: $color;
+}
+
+@mixin card-info-font-large($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color;
+}
+
+
+@mixin card-tagline-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: $color;
+}
+
+
+@mixin value-card-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: $color;
+}
+
+
+@mixin technique-card-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color;
+}
+
+
+@mixin feature-card-title-font($color: $color-default) {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  color: $color;
+}
+
+
+@mixin feature-card-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color;
+}
