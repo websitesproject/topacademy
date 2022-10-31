@@ -7,6 +7,9 @@ import Hero from '../components/genericComponents/Hero/Hero';
 import Page from '../components/layoutComponents/Page/Page';
 import Headermenu from '../components/genericComponents/Headermenu/Headermenu';
 import Menulink from '../components/genericComponents/Menulink/Menulink';
+import Paragraph from '../components/genericComponents/Paragraph/Paragraph';
+import Intro from '../components/genericComponents/Intro/Intro'
+import LeftRightBlock from '../components/genericComponents/LeftRightBlock/LeftRightBlock'
 
 
 
@@ -16,7 +19,10 @@ const components = {
   hero: Hero,
   page: Page,
   headermenu: Headermenu,
-  menulink: Menulink
+  menulink: Menulink,
+  paragraph: Paragraph,
+  intro: Intro,
+  leftrightblock: LeftRightBlock
 };
 
 storyblokInit({

@@ -132,8 +132,9 @@
 
 /* ========== Texts ========== */
 
+
 @mixin text-font($color: $color-default) {
-  font-family: "Roboto", sans-serif;
+  font-family: "Atlas Grotesk", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -147,6 +148,24 @@
   @media only screen and (min-width: 1250px) {
     font-size: 18px;
     line-height: 29px;
+  }
+}
+
+@mixin slightly-larger-text-font($color: $color-default) {
+  font-family: "Atlas Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color!important;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 20px;
+    line-height: 33px;
   }
 }
 
@@ -166,6 +185,94 @@
   @media only screen and (min-width: 1250px) {
     font-size: 30px;
     line-height: 40px;
+  }
+}
+
+
+@mixin larger-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+
+@mixin huge-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 800!important;
+  font-size: 28px!important;
+  line-height: 34px!important;
+  color: $color!important;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 35px!important;
+    line-height: 45px!important;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 41px!important;
+    line-height: 54px!important;
+  }
+}
+
+@mixin big-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif!important;
+  font-weight: 800!important;
+  font-size: 24px!important;
+  line-height: 34px!important;
+  color: $color!important;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 32px!important;
+    line-height: 40px!important;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 38px!important;
+    line-height: 50px!important;
+  }
+}
+
+@mixin small-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif!important;
+  font-weight: 400!important;
+  font-size: 14px!important;
+  line-height: 18px!important;
+  color: $color!important;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 15px!important;
+    line-height: 26px!important;
+  }
+}
+
+
+@mixin very-bold-text-font($color: $color-default) {
+  @include text-font($color);
+  font-weight: 800!important;
+}
+
+
+@mixin info-text-font($color: $color-default) {
+  font-family: "Roboto", sans-serif!important;
+  font-weight: 500!important;
+  font-size: 16px!important;
+  line-height: 32px!important;
+  color: $color!important;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 18px!important;
   }
 }
 
@@ -229,7 +336,7 @@
 }
 
 @mixin type-name-font($color: $color-default) {
-  font-family: "Brown LL", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;

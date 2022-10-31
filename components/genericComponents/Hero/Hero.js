@@ -6,6 +6,7 @@ import { modifyStoryBlokImage } from "../../../functions/StoryBlokImageHelper";
 import "lazysizes";
 import "lazysizes/plugins/attrchange/ls.attrchange";
 import { RichTextToHTML } from "../../../functions/storyBlokRichTextRenderer"; 
+import { getDefaultStoryBlokImageSet } from "../../../functions/StoryBlokImageHelper";
 
 
 export default function Hero({ blok }) {
@@ -25,10 +26,8 @@ export default function Hero({ blok }) {
 						{blok.tags && blok.tags.length > 0 && <TagList tags={blok.tags} variation={"white"} center />}
 					</div>
 					{showImage &&
-						<figure className={css["hero__media-container"]}>
-							<img className={[css["hero__media-image"], "lazyload"].join(" ")}
-								data-src={modifyStoryBlokImage(blok.image.filename, { width: 800 })}
-								alt={blok.image.alt} />
+						<figure className={css["hero__image-responsive-wrapper"]}>
+							{getDefaultStoryBlokImageSet(blok.image.filename, blok.image.alt, { largestImageWidth: 870, largestImageHeigth: 870 }, 850, css["hero__image"])}
 						</figure>
 					}
 
