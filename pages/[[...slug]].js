@@ -1,17 +1,18 @@
 import { useStoryblokState, getStoryblokApi, StoryblokComponent } from "@storyblok/react";
-import HeadComponent from "../components/genericComponents/HeadComponent/HeadComponent";
+import HeadComponent from "../components/specificComponents/HeadComponent/HeadComponent";
 import { getTags } from "../functions/services/metaTagService";
 
-export default function Page({ story, preview, socialtags }) {
+export default function Page({ story, preview, socialtags, menu }) {
   story = useStoryblokState(story, { //Hook that connects the current page to the Storyblok Real Time visual editor. Needs information about the relations in order for the relations to be editable as well.
     resolveRelations: [
+      "hero.colorcode"
     ]
   }, preview);
 
   return (
     <>
       <HeadComponent socialTags={socialtags} />
-      <StoryblokComponent blok={story.content} />
+      <StoryblokComponent menu={menu} blok={story.content} />
     </>
   );
 }
@@ -23,7 +24,7 @@ export async function getStaticProps({ params }) {
   let sbParams = {
     version: "draft", // 'draft' or 'published'
     resolve_relations: [
-      
+      "hero.colorcode"
     ]
   };
 
@@ -36,6 +37,15 @@ export async function getStaticProps({ params }) {
     }
   }
 
+  //getting menu data needed throughout the site
+  let menudata = await storyblokApi.get(`cdn/stories/reusable/headermenu`, sbParams);
+  if (!menudata) {
+    return {
+      notFound: true,
+    }
+  }
+  const menu = menudata.data.story;
+
   const title = data.story.name;
   const description = data.story.content.tagline ? data.story.content.tagline : `${title}`;
   const socialtags = getTags({
@@ -43,7 +53,7 @@ export async function getStaticProps({ params }) {
     pageDefaults: {
       "og:title": title,
       "og:description": description,
-      "og:url": `${process.env.NEXT_PUBLIC_DEPLOY_URL}`+slug
+      "og:url": `${process.env.NEXT_PUBLIC_DEPLOY_URL}` + slug
     }
   });
 
@@ -51,7 +61,8 @@ export async function getStaticProps({ params }) {
     props: {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
-      socialtags
+      socialtags,
+      menu
     },
     revalidate: 10,
   };

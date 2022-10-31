@@ -228,38 +228,40 @@
   color: $color;
 }
 
-
-@mixin value-card-font($color: $color-default) {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 27px;
+@mixin type-name-font($color: $color-default) {
+  font-family: "Brown LL", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
   color: $color;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 17px;
+    line-height: 32px;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 
-@mixin technique-card-font($color: $color-default) {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 30px;
-  color: $color;
-}
+/* ========== Header texts ========== */
 
-
-@mixin feature-card-title-font($color: $color-default) {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 30px;
-  color: $color;
-}
-
-
-@mixin feature-card-text-font($color: $color-default) {
+@mixin header-font($color: $color-default) {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 24px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color;
+}
+
+
+@mixin header-expanded-font($color: $color-default) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 26px;
   color: $color;
 }

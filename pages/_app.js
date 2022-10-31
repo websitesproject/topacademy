@@ -1,13 +1,22 @@
 import '../styles/globals.css'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Person from "../components/genericComponents/Person/Person";
-import Experience from '../components/genericComponents/Experience/Experience';
+import Person from "../components/specificComponents/Person/Person";
+import Experience from '../components/specificComponents/Experience/Experience';
+import Hero from '../components/genericComponents/Hero/Hero';
+import Page from '../components/layoutComponents/Page/Page';
+import Headermenu from '../components/genericComponents/Headermenu/Headermenu';
+import Menulink from '../components/genericComponents/Menulink/Menulink';
+
 
 
 const components = {
   person: Person,
-  experience: Experience
+  experience: Experience,
+  hero: Hero,
+  page: Page,
+  headermenu: Headermenu,
+  menulink: Menulink
 };
 
 storyblokInit({

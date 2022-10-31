@@ -1,6 +1,6 @@
 import { Component } from "react";
-import Headermenu from "./genericComponents/Headermenu/Headermenu";
-import MainFooter from "./genericComponents/MainFooter/MainFooter";
+import Headermenu from "../../genericComponents/Headermenu/Headermenu";
+// import MainFooter from "./specificComponents/MainFooter/MainFooter"; 
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 
@@ -19,7 +19,7 @@ export default class Page extends Component {
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           ))}
         </main>
-         <MainFooter /> 
+        {/* <MainFooter />  */}
       </>
     );
   }
