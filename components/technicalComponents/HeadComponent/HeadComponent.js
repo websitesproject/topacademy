@@ -61,7 +61,7 @@ export default class HeadComponent extends Component {
 				{this.state.loaded && <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />}
 			</Head>
 			<Script id="tawktoscriptwrapper" dangerouslySetInnerHTML={{
-					__html: `var Tawk_API=Tawk_API||{ }, Tawk_LoadStart=new Date();
+				__html: `var Tawk_API=Tawk_API||{ }, Tawk_LoadStart=new Date();
 					(function(){
 					var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 					s1.async=true;
@@ -69,7 +69,18 @@ export default class HeadComponent extends Component {
 					s1.charset='UTF-8';
 					s1.setAttribute('crossOrigin','*');
 					s0.parentNode.insertBefore(s1,s0);})();`,
-				}}>
+			}}>
+			</Script>
+			<Script id="gascriptwrapper" dangerouslySetInnerHTML={{
+				__html: `
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+					page_path: window.location.pathname,
+					});
+				`
+			}}>
 			</Script>
 		</>;
 	}
