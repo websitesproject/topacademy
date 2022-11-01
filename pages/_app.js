@@ -14,6 +14,9 @@ import LeftRightBlock from '../components/genericComponents/LeftRightBlock/LeftR
 import Course from '../components/specificComponents/Course/Course';
 import List from '../components/genericComponents/List/List';
 import Element from '../components/genericComponents/Element/Element';
+import OneCol from '../components/genericComponents/OneCol/OneCol';
+import TwoCol from '../components/genericComponents/TwoCol/TwoCol';
+import ThreeCol from '../components/genericComponents/ThreeCol/ThreeCol';
 
 
 
@@ -29,7 +32,10 @@ const components = {
   leftrightblock: LeftRightBlock,
   course:Course,
   list:List,
-  element:Element
+  element:Element,
+  onecol:OneCol,
+  twocol:TwoCol,
+  threecol:ThreeCol
 };
 
 storyblokInit({

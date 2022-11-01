@@ -7,7 +7,7 @@
   &--with-navigator {
     @extend .paragraph;
   }
-  
+
   &__text {
     @include slightly-larger-text-font;
   }
@@ -26,11 +26,12 @@
 
 @media only screen and (min-width: 850px) {
   .paragraph {
-    width: 780px;
+    width: 100%;
+    max-width: 780px;
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    
+
     &--with-navigator {
       width: auto;
       margin-left: 40px;
@@ -45,7 +46,7 @@
   .paragraph {
     margin-top: 102px;
     margin-bottom: 70px;
-    
+
     &--with-navigator {
       display: block;
       width: auto;
@@ -57,7 +58,8 @@
 
 @media only screen and (min-width: 1400px) {
   .paragraph {
-    width: 850px;
+    width: 100%;
+    max-width: 850px;
 
     &--with-navigator {
       width: auto;
@@ -69,7 +71,8 @@
 
 @media only screen and (min-width: 1600px) {
   .paragraph {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
 
     &--with-navigator {
       width: auto;
