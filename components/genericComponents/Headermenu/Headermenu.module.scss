@@ -362,7 +362,7 @@ span.main-header__dropdown-item-text--highlighted {
 
     &__nav-list {
       grid-template-rows: 98px;
-      grid-template-columns: 1fr repeat(10, auto) 1fr auto;
+      grid-template-columns: repeat(10, auto) 1fr auto;
       // When we have more than one centered nav item, remove this second grid-template-columns and use the first one
       //grid-template-columns: 75px repeat(3, auto) 1fr auto;
       grid-column-gap: 0;
