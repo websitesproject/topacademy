@@ -46,6 +46,7 @@ export default class HeadComponent extends Component {
 	}
 
 	render() {
+		const gasource = "https://www.googletagmanager.com/gtag/js?id="+process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 		return <>
 			<Head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,6 +72,7 @@ export default class HeadComponent extends Component {
 					s0.parentNode.insertBefore(s1,s0);})();`,
 			}}>
 			</Script>
+			<Script id="gascriptloader" src={gasource}></Script>
 			<Script id="gascriptwrapper" dangerouslySetInnerHTML={{
 				__html: `
 					window.dataLayer = window.dataLayer || [];
