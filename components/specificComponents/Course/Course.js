@@ -3,7 +3,8 @@ import css from "./Course.module.scss";
 import Headermenu from "../../genericComponents/Headermenu/Headermenu";
 import Hero from "../../genericComponents/Hero/Hero";
 import TeacherCard from "../TeacherCard/TeacherCard";
-import { storyblokEditable } from "@storyblok/react";
+import Element from "../../genericComponents/Element/Element";
+import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import { RichTextToHTML } from "../../../functions/storyBlokRichTextRenderer";
 
 export default class Course extends Component {
@@ -30,6 +31,14 @@ export default class Course extends Component {
 								<h2 className={css["rich-text-section__title"]}>Teachers</h2>
 								{this.props.blok.teachers && this.props.blok.teachers.map((teacher) => (
 									<TeacherCard blok={teacher} key={teacher._uid} />
+								))}
+							</section>
+						</div>
+						<div id="course-page__short-description" key="course-page__short-description" className={css["course-page__short-description"]}>
+							<section className={css["rich-text-section--with-navigator"]}>
+								<h2 className={css["rich-text-section__title"]}>Locations</h2>
+								{this.props.blok.locations && this.props.blok.locations.map((location) => (
+									<Element blok={location} key={location._uid} />
 								))}
 							</section>
 						</div>

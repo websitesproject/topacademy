@@ -23,7 +23,7 @@ import OneCol from '../components/genericComponents/OneCol/OneCol';
 import TwoCol from '../components/genericComponents/TwoCol/TwoCol';
 import ThreeCol from '../components/genericComponents/ThreeCol/ThreeCol';
 import ImageCarousel from '../components/genericComponents/ImageCarousel/ImageCarousel';
-
+import Location from '../components/specificComponents/Location/Location';
 
 
 const components = {
@@ -42,7 +42,8 @@ const components = {
   onecol: OneCol,
   twocol: TwoCol,
   threecol: ThreeCol,
-  imagecarousel: ImageCarousel
+  imagecarousel: ImageCarousel,
+  location: Location
 };
 
 storyblokInit({
