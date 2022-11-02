@@ -2,6 +2,7 @@
 import * as PropTypes from "prop-types";
 import Head from "next/head";
 import Script from "next/script"
+import { hotjar } from 'react-hotjar'
 
 function getTagElement([key, value]) {
 	if (key === "title") {
@@ -36,13 +37,13 @@ export default class HeadComponent extends Component {
 		this.setState({
 			loaded: document.readyState === "complete"
 		});
-
+		
 		document.addEventListener("readystatechange", () => {
 			this.setState({
 				loaded: document.readyState === "complete"
 			});
 		});
-
+		hotjar.initialize(3228407, 6);
 	}
 
 	render() {

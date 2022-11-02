@@ -4,7 +4,7 @@ import { storyblokInit, apiPlugin } from "@storyblok/react";
 
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { hotjar } from 'react-hotjar'
+
 
 import Person from "../components/specificComponents/Person/Person";
 import Teacher from "../components/specificComponents/Teacher/Teacher";
@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
       //ga.pageview(url)
     }
     //
-    hotjar.initialize(3228407, 6)
+
 
     //When the component is mounted, subscribe to router changes
     //and log those page views
