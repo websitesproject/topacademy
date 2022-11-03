@@ -19,9 +19,9 @@ import LeftRightBlock from '../components/genericComponents/LeftRightBlock/LeftR
 import Course from '../components/specificComponents/Course/Course';
 import List from '../components/genericComponents/List/List';
 import Element from '../components/genericComponents/Element/Element';
-import OneCol from '../components/genericComponents/OneCol/OneCol';
-import TwoCol from '../components/genericComponents/TwoCol/TwoCol';
-import ThreeCol from '../components/genericComponents/ThreeCol/ThreeCol';
+import OneCol from '../components/layoutComponents/OneCol/OneCol';
+import TwoCol from '../components/layoutComponents/TwoCol/TwoCol';
+import ThreeCol from '../components/layoutComponents/ThreeCol/ThreeCol';
 import ImageCarousel from '../components/genericComponents/ImageCarousel/ImageCarousel';
 import Location from '../components/specificComponents/Location/Location';
 
