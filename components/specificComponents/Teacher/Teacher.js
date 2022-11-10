@@ -5,7 +5,7 @@ import Hero from "../../genericComponents/Hero/Hero";
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import { RichTextToHTML } from "../../../functions/storyBlokRichTextRenderer";
 
-export default class Course extends Component {
+export default class Teacher extends Component {
 
 	constructor(props) {
 		super(props);
@@ -23,7 +23,7 @@ export default class Course extends Component {
 					<div className={css["teacher-page__main-content"]}>
 						<div id="teacher-page__short-description" key="teacher-page__short-description" className={css["teacher-page__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}>Bio</h2>
+								<h2 className={css["rich-text-section__title"]}>My Life</h2>
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.bio })}</div>
 							</section>
 						</div>
