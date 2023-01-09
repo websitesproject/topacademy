@@ -3,7 +3,9 @@ import * as PropTypes from "prop-types";
 import Head from "next/head";
 import Script from "next/script"
 import { hotjar } from 'react-hotjar'
+
 hotjar.initialize(3312458, 6)
+
 function getTagElement([key, value]) {
 	if (key === "title") {
 		return (
